@@ -32,14 +32,9 @@ const App = () => {
   }, [setData]);
 
 
-
-
-
-
-
+ 
 
   
-
   function createPost() {
     Axios
       .post(baseURL, {
@@ -51,7 +46,7 @@ const App = () => {
       });
   }
 
-  if (!post) return "no post"
+  if (!post) return data
 
 
   return (
@@ -70,7 +65,7 @@ const App = () => {
         agregar
       </div>
         <div>
-
+        <button onClick={createPost}>enviar</button>
         </div>
 
 
